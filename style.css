@@ -1,0 +1,22 @@
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    right: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    
+}
+ul{
+    list-style: none;
+    margin-bottom: 20px;
+}
