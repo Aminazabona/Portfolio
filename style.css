@@ -1,152 +1,102 @@
-/* ====== RESET ====== */
-* {
+/* Enlever marges du body */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    gap:700px
+}
+/* Le header */
+nav {
+    display: flex;
+    justify-content: space-between; /* logo à gauche / menu à droite */
+    align-items: center; /* aligné verticalement */
+    padding: 10px 30px;
+    background-color: white;
 }
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+/* Taille du logo */
+.logo {
+    width: 80px; /* change si tu veux */
 }
 
-/* ====== HEADER ====== */
-header {
+/* Liste horizontale sans points */
+nav ul {
+    display: flex;
+    gap: 25px; /* espace entre les liens */
+    list-style: none; /* enlever les points */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style des liens */
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* Section accueil */
+.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: white;
-    padding: 10px 40px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 10;
+    padding: 50px;
+    gap: 40px;
 }
 
-header img {
-    height: 60px;
+/* Texte à gauche */
+.hero .texte {
+    flex: 1;
+    max-width: 50%;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #0077ff;
-}
-
-/* ====== SECTIONS ====== */
-
-
-.section {
-    display: flex;              /* Active Flexbox */
-    justify-content: space-between; /* Sépare les deux côtés */
-    align-items: center;        /* Centre verticalement */
-    padding: 40px;
-}
-
-.text {
-    width: 50%;                 /* Le texte prend 50% */
-}
-
-.photo img {
-    width: 300px;               /* Taille de la photo */
-    border-radius: 10px;        /* Coins arrondis */
-}
-
-/* ====== A PROPOS ====== */
-#a\ propos {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-#a\ propos img {
-    height: 150px;
-    border-radius: 10px;
-}
-
-/* ====== PROJETS ====== */
-#project h3 {
-    margin-top: 20px;
-    color: #0077ff;
-}
-
-#project img {
-    width: 300px;
+/* Image à droite */
+.hero .photo img {
+    width: 300px;        /* tu peux changer */
     height: auto;
-    border-radius: 10px;
-    margin: 10px 0;
+    border-radius: 10px; /* optionnel pour arrondir */
 }
 
-/* ====== FORMULAIRE ====== */
-#form form {
-    background: white;
-    padding: 25px;
-    width: 350px;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-#form input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-#form button {
-    width: 100%;
-    padding: 12px;
-    background: #0077ff;
-    border: none;
-    border-radius: 6px;
+/* Bouton */
+.hero button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
     color: white;
-    font-weight: bold;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    
+}
+.presentation {
+    background-color: #f8f8f8;   /* Couleur de fond (optionnel) */
+    padding: 20px;
+    border-radius: 15px;        /* Radius = coins arrondis */
+    max-width: 700px;
 }
 
-#form button:hover {
-    background: #005ad1;
+.presentation h1 {
+    font-size: 32px;            /* Texte plus grand */
+    margin-bottom: 10px;
 }
 
-#form a img {
-    margin-top: 20px;
-    margin-right: 10px;
+.presentation p {
+    font-size: 18px;            /* Texte agrandi */
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 768px) {
-    /* Menu */
-    nav ul {
-        gap: 15px;
-    }
-
-    /* A propos */
-    #a\ propos {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    #project img {
-        width: 100%;
-    }
-
-    #form form {
-        width: 100%;
-    }
+.image img{
+    margin-right: 20px;
+    border-radius: 20px;   /* Coins arrondis sur l'image */
+    height: 350px;
 }
+
+
+
+
+
