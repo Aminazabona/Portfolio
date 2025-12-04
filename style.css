@@ -77,6 +77,7 @@ nav ul li a {
     padding: 20px;
     border-radius: 15px;        /* Radius = coins arrondis */
     max-width: 700px;
+    margin-left: 90px;
 }
 
 .presentation h1 {
@@ -106,7 +107,7 @@ nav ul li a {
 .apropos .image1 img {
     height: 350px;
     border-radius: 12px; 
-    margin-left: 200px;    /* Coins arrondis */
+    margin-left: 150px;    /* Coins arrondis */
 }
 
 /* Texte */
@@ -123,8 +124,42 @@ nav ul li a {
     line-height: 1.6;
     margin: 0;
 }
+#project {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
+    gap: 20px; /* espace entre les cartes */
+    padding: 20px;
+}
 
+#project h2 {
+    grid-column: 1 / -1; /* Le titre prend toute la largeur */
+    text-align: center;
+    margin-bottom: 20px;
+}
 
+/* Style des boîtes (optionnel mais propre) */
+#project .info1,
+#project .info2,
+#project .info3 {
+    background: #f7f7f7;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
+}
 
+#project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0;
+}
 
+#project h3 {
+    margin-bottom: 10px;
+}
+
+#project p {
+    line-height: 1.5;
+}
 
