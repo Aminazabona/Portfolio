@@ -91,9 +91,37 @@ nav ul li a {
 }
 
 .image img{
-    margin-right: 20px;
+    margin-right: 200px;
     border-radius: 20px;   /* Coins arrondis sur l'image */
     height: 350px;
+}
+.apropos {
+    display: flex;
+    align-items: center;     /* Aligne verticalement */
+    gap: 250px;               /* Espace entre image et texte */
+    padding: 20px;
+}
+
+/* Image */
+.apropos .image1 img {
+    height: 350px;
+    border-radius: 12px; 
+    margin-left: 200px;    /* Coins arrondis */
+}
+
+/* Texte */
+.apropos .texte {
+    max-width: 600px;
+}
+
+.apropos h2 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.apropos p {
+    line-height: 1.6;
+    margin: 0;
 }
 
 
