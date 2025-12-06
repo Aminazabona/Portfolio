@@ -3,40 +3,47 @@ body {
     margin: 0;
     padding: 0;
 }
-header{
-    display: flex;
-    gap:700px
+.head{
+    gap: 100px;
 }
-/* Le header */
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 701px;
+}
+
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between; /* logo à gauche / menu à droite */
-    align-items: center; /* aligné verticalement */
-    padding: 10px 30px;
-    background-color: white;
+    align-items: center;
+    width: 100%;
 }
 
-/* Taille du logo */
+/* Logo */
 .logo {
-    width: 80px; /* change si tu veux */
+    width: 80px;
 }
 
 /* Liste horizontale sans points */
 nav ul {
     display: flex;
-    gap: 25px; /* espace entre les liens */
-    list-style: none; /* enlever les points */
+    gap: 30px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* Style des liens */
 nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-/* Section accueil */
+
+/* SECTION ACCUEIL (HERO) */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -53,9 +60,9 @@ nav ul li a {
 
 /* Image à droite */
 .hero .photo img {
-    width: 300px;        /* tu peux changer */
+    width: 300px;
     height: auto;
-    border-radius: 10px; /* optionnel pour arrondir */
+    border-radius: 10px;
 }
 
 /* Bouton */
@@ -67,11 +74,63 @@ nav ul li a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    align-items: center;
     display: flex;
     gap: 10px;
-    
+    align-items: center;
 }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    /* Header : empiler logo et menu */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Hero : texte et image empilés */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .hero .texte, 
+    .hero .photo img {
+        max-width: 100%;
+    }
+
+    .hero button {
+        justify-content: center;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .hero .texte h1 {
+        font-size: 24px; /* réduire taille titre */
+    }
+
+    .hero .texte p {
+        font-size: 16px; /* réduire texte */
+    }
+
+    .hero .photo img {
+        width: 80%; /* image plus petite sur mobile */
+    }
+}
+
 .presentation {
     background-color: #f8f8f8;   /* Couleur de fond (optionnel) */
     padding: 20px;
@@ -162,4 +221,119 @@ nav ul li a {
 #project p {
     line-height: 1.5;
 }
+/* ===== SECTION CONTACT ===== */
+#form {
+    padding: 40px 60px;
+    background: #f8f8f8;
+}
 
+/* Titre */
+#form h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Disposition image + formulaire */
+.form-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Image à gauche */
+.contact img {
+    width: 300px;  /* Augmenté */
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Formulaire à droite */
+.formulaire {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Inputs : hauteur minimale 50px */
+.formulaire form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    min-height: 50px;  /* ⚡ Hauteur minimale */
+}
+
+.formulaire form input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108,99,255,0.4);
+    outline: none;
+}
+
+/* Label */
+.formulaire form label {
+    font-weight: 600;
+    color: #444;
+}
+
+/* Bouton ENVOYER seulement */
+.formulaire button {
+    width: 20%;
+    background: #6c63ff;
+    color: white;
+    padding: 14px 0;   /* Hauteur agréable */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.formulaire button:hover {
+    background: #574ef2;
+}
+
+/* ===== SOCIAL ===== */
+.social {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.social img {
+    height: 25px;
+    transition: 0.3s;
+}
+
+.social img:hover {
+    transform: scale(1.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 850px) {
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact img {
+        width: 80%;
+    }
+
+    .formulaire {
+        width: 100%;
+    }
+}
